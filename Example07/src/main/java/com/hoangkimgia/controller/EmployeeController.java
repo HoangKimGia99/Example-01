@@ -1,5 +1,7 @@
 package com.hoangkimgia.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,9 +16,9 @@ public class EmployeeController {
 			return "viewpage";
 	    }
 			@RequestMapping("/helloagain")
-			public String submitForm(@Validated @ModelAttribute("emp") Employee e,BindingResult br) {
+			public String submitForm(@Valid @ModelAttribute("emp") Employee e,BindingResult br) {
 				if(br.hasErrors()) {
-					return "confirmation-page";
+					return "viewpage";
 				}
 				else {
 					return "confirmation-page";

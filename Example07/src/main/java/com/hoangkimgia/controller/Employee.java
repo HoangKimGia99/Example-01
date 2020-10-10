@@ -1,10 +1,13 @@
 package com.hoangkimgia.controller;
-
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 public class Employee {
 	private String name;
-
+@Size(min=1,message="required")
 	private String pass;
-
+@Min(value=18,message="must be equal or greater than 18")
+@Max(value=45,message="must be equal or less than 45")
 	private int age;
 	public Employee() 
 	{}
