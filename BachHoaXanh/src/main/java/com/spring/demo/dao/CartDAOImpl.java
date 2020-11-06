@@ -14,7 +14,9 @@ import com.spring.demo.model.Product;
 
 @Repository
 public class CartDAOImpl implements CartDAO {
+	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(CartDAOImpl.class);
+	@SuppressWarnings("unused")
 	private SessionFactory sessionFactory;
 
 	public void setSessionFactory(SessionFactory sf) {

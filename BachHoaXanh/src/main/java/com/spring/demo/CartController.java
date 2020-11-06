@@ -77,6 +77,7 @@ public class CartController {
 	}
 	@RequestMapping(value = "gio-hang")
 	public String Cart(Model model) {
+		 //Category
 		return "shop/shoping-cart";
 	}
 }
